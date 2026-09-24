@@ -1,0 +1,593 @@
+/* ==================================================
+   LIFEVAULT THEME SYSTEM
+================================================== */
+
+:root {
+  /* LifeVault brand */
+  --lv-primary: #2563eb;
+  --lv-primary-hover: #1d4ed8;
+  /* Light theme */
+  --lv-bg: #f5f7fb;
+  --lv-surface: #ffffff;
+  --lv-surface-soft: #f8fafc;
+  --lv-text: #172033;
+  --lv-text-secondary: #64748b;
+  --lv-border: #e2e8f0;
+  --lv-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+  --lv-radius: 12px;
+  /* Bootstrap integration */
+  --bs-body-bg: var(--lv-bg);
+  --bs-body-color: var(--lv-text);
+  --bs-secondary-color: var(--lv-text-secondary);
+  --bs-border-color: var(--lv-border);
+  --bs-card-bg: var(--lv-surface);
+  --bs-card-color: var(--lv-text);
+  --bs-tertiary-bg: var(--lv-surface-soft);
+}
+
+/* ==================================================
+   DARK THEME
+================================================== */
+
+html[data-theme="dark"] {
+  --lv-bg: #0f172a;
+  --lv-surface: #1e293b;
+  --lv-surface-soft: #253247;
+  --lv-text: #f1f5f9;
+  --lv-text-secondary: #94a3b8;
+  --lv-border: #334155;
+  --lv-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  --bs-body-bg: var(--lv-bg);
+  --bs-body-color: var(--lv-text);
+  --bs-secondary-color: var(--lv-text-secondary);
+  --bs-border-color: var(--lv-border);
+  --bs-card-bg: var(--lv-surface);
+  --bs-card-color: var(--lv-text);
+  --bs-tertiary-bg: var(--lv-surface-soft);
+}
+
+/* ==================================================
+   GLOBAL
+================================================== */
+
+html {
+  min-height: 100%;
+  background: var(--lv-bg);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--lv-bg);
+  color: var(--lv-text);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+#root {
+  min-height: 100vh;
+  background: var(--lv-bg);
+}
+
+/* ==================================================
+   SURFACES
+================================================== */
+
+.card {
+  background-color: var(--lv-surface);
+  color: var(--lv-text);
+  border-color: var(--lv-border);
+}
+
+.bg-white {
+  background-color: var(--lv-surface) !important;
+}
+
+.bg-light {
+  background-color: var(--lv-surface-soft) !important;
+}
+
+/* ==================================================
+   TEXT
+================================================== */
+
+.text-secondary {
+  color: var(--lv-text-secondary) !important;
+}
+
+.text-dark {
+  color: var(--lv-text) !important;
+}
+
+/* ==================================================
+   BORDERS
+================================================== */
+
+.border {
+  border-color: var(--lv-border) !important;
+}
+
+.border-bottom {
+  border-color: var(--lv-border) !important;
+}
+
+.border-top {
+  border-color: var(--lv-border) !important;
+}
+
+/* ==================================================
+   FORMS
+================================================== */
+
+.form-control,
+.form-select {
+  background-color: var(--lv-surface);
+  color: var(--lv-text);
+  border-color: var(--lv-border);
+}
+
+.form-control::placeholder {
+  color: var(--lv-text-secondary);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--lv-surface);
+  color: var(--lv-text);
+  border-color: var(--lv-primary);
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.12);
+}
+
+.input-group-text {
+  background-color: var(--lv-surface-soft);
+  color: var(--lv-text-secondary);
+  border-color: var(--lv-border);
+}
+
+/* ==================================================
+   DROPDOWNS
+================================================== */
+
+.dropdown-menu {
+  background-color: var(--lv-surface);
+  border-color: var(--lv-border);
+  box-shadow: var(--lv-shadow);
+}
+
+.dropdown-item {
+  color: var(--lv-text);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: var(--lv-surface-soft);
+  color: var(--lv-text);
+}
+
+/* ==================================================
+   MODALS
+================================================== */
+
+.lifevault-modal-content {
+  background-color: var(--lv-surface);
+  color: var(--lv-text);
+}
+
+.modal-header,
+.modal-footer {
+  border-color: var(--lv-border);
+}
+
+/* Bootstrap modal compatibility */
+
+.modal-content {
+  background-color: var(--lv-surface);
+  color: var(--lv-text);
+  border-color: var(--lv-border);
+}
+
+/* ==================================================
+   LIST GROUPS
+================================================== */
+
+.list-group-item {
+  background-color: var(--lv-surface);
+  color: var(--lv-text);
+  border-color: var(--lv-border);
+}
+
+/* ==================================================
+   PROGRESS
+================================================== */
+
+.progress {
+  background-color: var(--lv-surface-soft);
+}
+
+/* ==================================================
+   BUTTONS
+================================================== */
+
+.btn-light {
+  background-color: var(--lv-surface-soft);
+  color: var(--lv-text);
+
+  border-color: var(--lv-border);
+}
+
+.btn-light:hover {
+  background-color: var(--lv-border);
+  color: var(--lv-text);
+}
+
+.btn-outline-secondary {
+  color: var(--lv-text-secondary);
+  border-color: var(--lv-border);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--lv-surface-soft);
+  color: var(--lv-text);
+}
+
+/* ==================================================
+   TABLES
+================================================== */
+
+.table {
+  color: var(--lv-text);
+}
+
+.table > :not(caption) > * > * {
+  background-color: var(--lv-surface);
+  color: var(--lv-text);
+
+  border-bottom-color: var(--lv-border);
+}
+
+/* ==================================================
+   USER SIDEBAR
+================================================== */
+
+.lifevault-user-sidebar {
+  width: 220px;
+  min-width: 220px;
+  flex-shrink: 0;
+}
+
+/* ==================================================
+   ADMIN SIDEBAR
+================================================== */
+
+.lifevault-admin-sidebar {
+  width: 220px;
+  min-width: 220px;
+  flex-shrink: 0;
+}
+
+/* ==================================================
+   DARK THEME - USER SIDE
+================================================== */
+
+html[data-theme="dark"] .lifevault-user-sidebar,
+html[data-theme="dark"] .lifevault-admin-sidebar {
+  background-color: var(--lv-surface) !important;
+  border-color: var(--lv-border) !important;
+}
+
+html[data-theme="dark"] header {
+  background-color: var(--lv-surface) !important;
+  border-color: var(--lv-border) !important;
+}
+
+/* ==================================================
+   THEME TRANSITIONS
+================================================== */
+
+body,
+.card,
+header,
+.lifevault-modal-content,
+.form-control,
+.form-select,
+.btn-light,
+.dropdown-menu,
+.list-group-item {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* ==================================================
+   DARK THEME - BOOTSTRAP OVERRIDES
+================================================== */
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* --------------------------------------------------
+   DARK OUTLINE BUTTON
+-------------------------------------------------- */
+
+html[data-theme="dark"] .btn-outline-dark {
+  color: #f1f5f9;
+  border-color: #64748b;
+  background-color: transparent;
+}
+
+html[data-theme="dark"] .btn-outline-dark:hover,
+html[data-theme="dark"] .btn-outline-dark:focus {
+  color: #ffffff;
+  background-color: #334155;
+  border-color: #64748b;
+}
+
+/* --------------------------------------------------
+   DARK LIGHT BUTTON
+-------------------------------------------------- */
+
+html[data-theme="dark"] .btn-light {
+  background-color: #253247;
+  color: #f1f5f9;
+  border-color: #3b4a60;
+}
+
+html[data-theme="dark"] .btn-light:hover,
+html[data-theme="dark"] .btn-light:focus {
+  background-color: #334155;
+  color: #ffffff;
+  border-color: #475569;
+}
+
+/* --------------------------------------------------
+   DARK SECONDARY BUTTON
+-------------------------------------------------- */
+
+html[data-theme="dark"] .btn-outline-secondary {
+  color: #cbd5e1;
+  border-color: #64748b;
+}
+
+html[data-theme="dark"] .btn-outline-secondary:hover,
+html[data-theme="dark"] .btn-outline-secondary:focus {
+  color: #ffffff;
+  background-color: #334155;
+  border-color: #64748b;
+}
+
+/* --------------------------------------------------
+   DARK FORM CHECK / SWITCH
+-------------------------------------------------- */
+
+html[data-theme="dark"] .form-check-input {
+  background-color: #334155;
+  border-color: #64748b;
+}
+
+html[data-theme="dark"] .form-check-input:checked {
+  background-color: var(--lv-primary);
+  border-color: var(--lv-primary);
+}
+
+/* --------------------------------------------------
+   DARK ALERT-LIGHT
+-------------------------------------------------- */
+
+html[data-theme="dark"] .alert-light {
+  background-color: #253247;
+  color: #f1f5f9;
+  border-color: #3b4a60;
+}
+
+html[data-theme="dark"] .alert-light .text-secondary {
+  color: #94a3b8 !important;
+}
+
+/* --------------------------------------------------
+   DARK BADGES
+-------------------------------------------------- */
+
+html[data-theme="dark"] .text-bg-light {
+  background-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+/* --------------------------------------------------
+   DARK ICON CONTAINERS
+-------------------------------------------------- */
+
+html[data-theme="dark"] .storage-type-icon,
+html[data-theme="dark"] .ai-insight-icon {
+  background-color: #253247;
+  color: #cbd5e1;
+}
+
+/* --------------------------------------------------
+   DARK ICONS INSIDE COMMON LIGHT BOXES
+-------------------------------------------------- */
+
+html[data-theme="dark"] .bg-light i,
+html[data-theme="dark"] .btn-light i {
+  color: #cbd5e1;
+}
+
+/* --------------------------------------------------
+   DARK STORAGE / DASHBOARD ICON AREAS
+-------------------------------------------------- */
+
+html[data-theme="dark"] .storage-overview-icon,
+html[data-theme="dark"] .dashboard-icon,
+html[data-theme="dark"] .stats-icon {
+  background-color: #253247;
+  color: #cbd5e1;
+}
+
+/* --------------------------------------------------
+   DARK HEADER BUTTONS
+-------------------------------------------------- */
+
+html[data-theme="dark"] header .btn-light {
+  background-color: #253247;
+  color: #f1f5f9;
+  border-color: #3b4a60;
+}
+
+html[data-theme="dark"] header .btn-light:hover {
+  background-color: #334155;
+  color: #ffffff;
+}
+
+/* --------------------------------------------------
+   DARK DROPDOWN
+-------------------------------------------------- */
+
+html[data-theme="dark"] .user-header-dropdown {
+  background-color: #1e293b;
+  border-color: #334155;
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme="dark"] .user-dropdown-header,
+html[data-theme="dark"] .user-dropdown-info,
+html[data-theme="dark"] .user-dropdown-footer {
+  border-color: #334155;
+}
+
+html[data-theme="dark"] .user-dropdown-avatar {
+  background-color: #334155;
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .user-dropdown-info-item > div {
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .user-dropdown-info-item > span {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .user-dropdown-link {
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .user-dropdown-link:hover {
+  background-color: #253247;
+  color: #ffffff;
+}
+
+/* --------------------------------------------------
+   DARK CLOSE BUTTON
+-------------------------------------------------- */
+
+/*
+   Bootstrap's default close icon can become hard
+   to see against the dark modal.
+*/
+
+html[data-theme="dark"] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* --------------------------------------------------
+   DARK HR
+-------------------------------------------------- */
+
+html[data-theme="dark"] hr {
+  color: #475569;
+  opacity: 1;
+}
+
+/* --------------------------------------------------
+   DARK PLACEHOLDER
+-------------------------------------------------- */
+
+html[data-theme="dark"] .form-control::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+  color: #64748b;
+}
+
+/* --------------------------------------------------
+   DARK READONLY INPUT
+-------------------------------------------------- */
+
+html[data-theme="dark"] .form-control[readonly] {
+  background-color: #253247;
+  color: #cbd5e1;
+}
+
+/* --------------------------------------------------
+   DARK DISABLED BUTTONS
+-------------------------------------------------- */
+
+html[data-theme="dark"] .btn:disabled {
+  opacity: 0.5;
+}
+
+/* --------------------------------------------------
+   DARK TABLE / DIVIDERS
+-------------------------------------------------- */
+
+html[data-theme="dark"] .table-light,
+html[data-theme="dark"] .table-light > * {
+  background-color: #253247 !important;
+  color: #f1f5f9 !important;
+}
+
+/* --------------------------------------------------
+   DARK PROGRESS BAR BACKGROUND
+-------------------------------------------------- */
+
+html[data-theme="dark"] .progress {
+  background-color: #253247;
+}
+
+/* --------------------------------------------------
+   DARK LINKS
+-------------------------------------------------- */
+
+html[data-theme="dark"] a {
+  color: #60a5fa;
+}
+
+html[data-theme="dark"] a:hover {
+  color: #93c5fd;
+}
+
+/* Don't change button/link component colors unnecessarily */
+html[data-theme="dark"] button {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* ==================================================
+   DASHBOARD SECTION ICON
+================================================== */
+
+.dashboard-section-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: var(--lv-surface-soft);
+  color: var(--lv-primary);
+  flex-shrink: 0;
+}
+
+.dashboard-section-icon i {
+  font-size: 1.1rem;
+}
+
+/* Dark mode */
+
+html[data-theme="dark"] .dashboard-section-icon {
+  background-color: #334155;
+  color: #60a5fa;
+}

@@ -1,0 +1,57 @@
+.storage-overview-card {
+  border-radius: 18px;
+}
+
+.storage-main-icon,
+.storage-type-icon,
+.storage-plan-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #f8f9fa;
+}
+
+.storage-main-icon {
+  width: 50px;
+  height: 50px;
+  font-size: 1.4rem;
+}
+
+.storage-type-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.storage-breakdown-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.storage-breakdown-item:last-child {
+  border-bottom: 0;
+}
+
+.storage-plan-card {
+  border-radius: 18px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.storage-plan-card:hover {
+  transform: translateY(-3px);
+}
+
+.storage-plan-icon {
+  width: 46px;
+  height: 46px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 767.98px) {
+  .storage-plan-card {
+    border-radius: 14px;
+  }
+}

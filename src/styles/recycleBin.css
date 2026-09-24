@@ -1,0 +1,43 @@
+.recycle-bin-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.recycle-bin-card:hover {
+  transform: translateY(-3px);
+}
+
+.recycle-bin-preview {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #f5f5f5;
+  border-radius: 10px 10px 0 0;
+}
+
+.recycle-bin-image-preview,
+.recycle-bin-video-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recycle-bin-icon {
+  font-size: 3rem;
+  color: #6c757d;
+}
+
+.recycle-bin-file-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recycle-bin-empty {
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px dashed #dee2e6;
+}

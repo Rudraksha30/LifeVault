@@ -1,0 +1,93 @@
+.lifevault-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.lifevault-modal-dialog {
+    width: 100%;
+    max-width: 800px;
+    height: 85vh;
+    max-height: 85vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.lifevault-modal-content {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 0;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* Header */
+.lifevault-modal-header {
+    flex: 0 0 auto;
+    padding: 1rem 1.25rem;
+}
+
+/* Form */
+.lifevault-modal-content > form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+/* Scrollable body */
+.lifevault-modal-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1.25rem;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Footer */
+.lifevault-modal-footer {
+    flex: 0 0 auto;
+    padding: 0.75rem 1.25rem;
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .lifevault-modal-backdrop {
+        padding: 0.5rem;
+    }
+
+    .lifevault-modal-dialog {
+        height: calc(100vh - 1rem);
+        max-height: calc(100vh - 1rem);
+    }
+
+    .lifevault-modal-header {
+        padding: 0.875rem 1rem;
+    }
+
+    .lifevault-modal-body {
+        padding: 1rem;
+    }
+
+    .lifevault-modal-footer {
+        padding: 0.75rem 1rem;
+    }
+
+    .lifevault-modal-content {
+        border-radius: 12px;
+    }
+}
