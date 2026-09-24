@@ -447,8 +447,7 @@ html[data-theme="dark"] header .btn-light:hover {
 html[data-theme="dark"] .user-header-dropdown {
   background-color: #1e293b;
   border-color: #334155;
-  box-shadow:
-    0 12px 35px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
 }
 
 html[data-theme="dark"] .user-dropdown-header,
@@ -590,4 +589,184 @@ html[data-theme="dark"] button {
 html[data-theme="dark"] .dashboard-section-icon {
   background-color: #334155;
   color: #60a5fa;
+}
+
+/* Public landing page */
+.lifevault-hero {
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(96, 165, 250, 0.22),
+      transparent 28rem
+    ),
+    linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+}
+.lv-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--lv-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.lifevault-hero h1 {
+  max-width: 700px;
+  letter-spacing: -0.04em;
+}
+.lifevault-hero h1 span {
+  color: var(--lv-primary);
+}
+.vault-preview {
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 18px;
+  background: var(--lv-surface);
+  transform: rotate(2deg);
+}
+.vault-preview-top {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  height: 35px;
+  padding: 0 0.8rem;
+  background: #e8eef8;
+  color: #64748b;
+}
+.vault-preview-top span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #cbd5e1;
+}
+.vault-preview-top small {
+  margin-left: auto;
+  font-size: 0.68rem;
+}
+.vault-preview-body {
+  padding: 1.5rem;
+}
+.vault-avatar {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #2563eb;
+  font-weight: 700;
+}
+.vault-memory-card {
+  display: flex;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+.vault-memory-card strong,
+.vault-memory-card span {
+  display: block;
+}
+.vault-memory-card span {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+.memory-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #fef3c7;
+  color: #d97706;
+}
+.vault-stat {
+  padding: 0.85rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+.vault-stat i {
+  color: #2563eb;
+}
+.vault-stat strong,
+.vault-stat span {
+  display: block;
+}
+.vault-stat strong {
+  margin-top: 0.25rem;
+  font-size: 1.2rem;
+}
+.vault-stat span {
+  color: #64748b;
+  font-size: 0.76rem;
+}
+.lv-feature {
+  padding: 1.5rem;
+  border: 1px solid var(--lv-border);
+  border-radius: var(--lv-radius);
+  background: var(--lv-surface);
+}
+.lv-feature-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #dbeafe;
+  color: #2563eb;
+  font-size: 1.25rem;
+}
+.lv-cta {
+  border-radius: 20px;
+  color: #fff;
+  background: linear-gradient(120deg, #1d4ed8, #2563eb 55%, #3b82f6);
+}
+.lv-cta p {
+  color: #dbeafe;
+}
+.lv-cta .btn-light {
+  background: #fff;
+  color: #1d4ed8;
+  border-color: #fff;
+}
+.lv-footer {
+  background: var(--lv-surface-soft);
+}
+.lv-footer .navbar-brand {
+  color: var(--lv-text);
+  text-decoration: none;
+}
+.lv-footer a:not(.navbar-brand) {
+  color: var(--lv-text-secondary);
+  text-decoration: none;
+}
+.lv-footer a:not(.navbar-brand):hover {
+  color: var(--lv-primary);
+}
+html[data-theme="dark"] .lifevault-hero {
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(37, 99, 235, 0.25),
+      transparent 28rem
+    ),
+    var(--lv-bg);
+}
+html[data-theme="dark"] .vault-preview-top,
+html[data-theme="dark"] .vault-memory-card {
+  background: #253247;
+}
+html[data-theme="dark"] .vault-stat {
+  border-color: #334155;
+}
+html[data-theme="dark"] .vault-memory-card span,
+html[data-theme="dark"] .vault-stat span {
+  color: #94a3b8;
+}
+@media (max-width: 991.98px) {
+  .vault-preview {
+    transform: none;
+    max-width: 480px;
+  }
 }

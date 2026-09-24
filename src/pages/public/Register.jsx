@@ -18,6 +18,8 @@ function Register() {
 
   const [fieldErrors, setFieldErrors] = useState({});
   const [success, setSuccess] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
@@ -220,15 +222,20 @@ function Register() {
                     Password
                   </label>
 
-                  <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    className={`form-control ${fieldErrors.password ? "is-invalid" : ""}`}
-                    placeholder="Create a password"
-                    value={formData.password}
-                    onChange={handleChange}
-                  />
+                  <div className="input-group">
+                    <input
+                      id="password"
+                      name="password"
+                      type={showPassword ? "text" : "password"}
+                      className={`form-control ${fieldErrors.password ? "is-invalid" : ""}`}
+                      placeholder="Create a password"
+                      value={formData.password}
+                      onChange={handleChange}
+                    />
+                    <button type="button" className={`btn btn-outline-secondary ${fieldErrors.password ? "border-danger" : ""}`} onClick={() => setShowPassword((visible) => !visible)} aria-label={showPassword ? "Hide password" : "Show password"} aria-pressed={showPassword}>
+                      <i className={`bi bi-eye${showPassword ? "-slash" : ""}`} aria-hidden="true"></i>
+                    </button>
+                  </div>
                   {fieldErrors.password && <div className="invalid-feedback">{fieldErrors.password}</div>}
 
                   <div className="form-text">
@@ -242,15 +249,20 @@ function Register() {
                     Confirm Password
                   </label>
 
-                  <input
-                    id="confirmPassword"
-                    name="confirmPassword"
-                    type="password"
-                    className={`form-control ${fieldErrors.confirmPassword ? "is-invalid" : ""}`}
-                    placeholder="Re-enter your password"
-                    value={formData.confirmPassword}
-                    onChange={handleChange}
-                  />
+                  <div className="input-group">
+                    <input
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      type={showConfirmPassword ? "text" : "password"}
+                      className={`form-control ${fieldErrors.confirmPassword ? "is-invalid" : ""}`}
+                      placeholder="Re-enter your password"
+                      value={formData.confirmPassword}
+                      onChange={handleChange}
+                    />
+                    <button type="button" className={`btn btn-outline-secondary ${fieldErrors.confirmPassword ? "border-danger" : ""}`} onClick={() => setShowConfirmPassword((visible) => !visible)} aria-label={showConfirmPassword ? "Hide password" : "Show password"} aria-pressed={showConfirmPassword}>
+                      <i className={`bi bi-eye${showConfirmPassword ? "-slash" : ""}`} aria-hidden="true"></i>
+                    </button>
+                  </div>
                   {fieldErrors.confirmPassword && <div className="invalid-feedback">{fieldErrors.confirmPassword}</div>}
                 </div>
 

@@ -13,6 +13,7 @@ function Login() {
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -107,15 +108,26 @@ function Login() {
                     Password
                   </label>
 
-                  <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    className="form-control"
-                    value={formData.password}
-                    onChange={handleChange}
-                    placeholder="Enter your password"
-                  />
+                  <div className="input-group">
+                    <input
+                      id="password"
+                      name="password"
+                      type={showPassword ? "text" : "password"}
+                      className="form-control"
+                      value={formData.password}
+                      onChange={handleChange}
+                      placeholder="Enter your password"
+                    />
+                    <button
+                      type="button"
+                      className="btn btn-outline-secondary"
+                      onClick={() => setShowPassword((visible) => !visible)}
+                      aria-label={showPassword ? "Hide password" : "Show password"}
+                      aria-pressed={showPassword}
+                    >
+                      <i className={`bi bi-eye${showPassword ? "-slash" : ""}`} aria-hidden="true"></i>
+                    </button>
+                  </div>
                 </div>
 
                 <button
